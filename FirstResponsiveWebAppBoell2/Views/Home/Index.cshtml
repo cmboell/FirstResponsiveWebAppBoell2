@@ -1,0 +1,38 @@
+﻿@model DetermineAgeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--user view -->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Determine Your Age In 2021</title><!--title of page-->
+    <link rel="stylesheet" href="~/css/customS.css" /> <!--links css stylesheet to this single page-->
+</head>
+<body>
+    <h1>Determine Your Age In 2021</h1><!--header for page-->
+    <form asp-action="Index" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Name">Name:</label>  <!--label for name-->
+            <input asp-for="Name" />  <!--input area for user input for name-->
+        </div>
+        <div>
+            <label asp-for="Birthday">Birth Year:</label>  <!--label for birth year-->
+            <input asp-for="Birthday" />  <!--input area for user input of birth year-->
+        </div>
+        <div>
+            <label>Current Age:</label>    <!--label for calculated age of current age-->
+            <input value="@ViewBag.FV.ToString()" readonly> <!--read only so user can't input,output of age shows here after calculated-->
+        </div>
+        <div>
+            <label>Age By Dec 31, 2021:</label>    <!--label for calculated age by Dec 31, 2021-->
+            <input value="@ViewBag.FV2.ToString()" readonly> <!--read only so user can't input,output of age shows here after calculated-->
+        </div>
+        <button type="submit">Calculate</button>    <!--submit button-->
+        <a asp-action="Index">Clear</a>   <!--Clear button, reset view-->
+    </form>
+</body>
+</html>

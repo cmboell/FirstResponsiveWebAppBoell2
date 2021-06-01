@@ -1,0 +1,22 @@
+﻿/*style sheet to stylize the page*/
+body {
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+    color: red;
+    text-decoration: underline;
+}
+
+label {
+    display: inline-block;
+    width: 10em;
+    padding-right: 1em;
+    color: darkslategrey;
+}
+
+div {
+    margin: .5em;
+}
