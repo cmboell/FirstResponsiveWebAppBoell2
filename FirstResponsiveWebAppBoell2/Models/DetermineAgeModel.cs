@@ -11,7 +11,8 @@ namespace FirstResponsiveWebAppBoell2.Models
         //attributes
         [Required(ErrorMessage = "Please enter your name.")] // makes name a required field, error message if name isnt entered
         public String Name { get; set; }
-        [Required(ErrorMessage = "Please enter your date of birth")]//makes entering date of birth required, shows error message if not
+        [Required(ErrorMessage ="Please enter a valid date")]
+        [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
         readonly DateTime Now = DateTime.Today;//gets current day and time
         //method to determine your age
